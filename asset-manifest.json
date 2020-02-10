@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dobby/static/css/main.3c14189b.chunk.css",
+    "main.js": "/dobby/static/js/main.ecec1d2b.chunk.js",
+    "main.js.map": "/dobby/static/js/main.ecec1d2b.chunk.js.map",
+    "runtime-main.js": "/dobby/static/js/runtime-main.a4fcce5a.js",
+    "runtime-main.js.map": "/dobby/static/js/runtime-main.a4fcce5a.js.map",
+    "static/js/2.4fb69190.chunk.js": "/dobby/static/js/2.4fb69190.chunk.js",
+    "static/js/2.4fb69190.chunk.js.map": "/dobby/static/js/2.4fb69190.chunk.js.map",
+    "index.html": "/dobby/index.html",
+    "precache-manifest.cf4e10d1702d0bf8330ba3465744fd89.js": "/dobby/precache-manifest.cf4e10d1702d0bf8330ba3465744fd89.js",
+    "service-worker.js": "/dobby/service-worker.js",
+    "static/css/main.3c14189b.chunk.css.map": "/dobby/static/css/main.3c14189b.chunk.css.map",
+    "static/js/2.4fb69190.chunk.js.LICENSE.txt": "/dobby/static/js/2.4fb69190.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/dobby/static/media/logo.5d5d9eef.svg",
+    "static/media/slave_nonsan.jpg": "/dobby/static/media/slave_nonsan.2545546f.jpg",
+    "static/media/stop_it.jpg": "/dobby/static/media/stop_it.b3ac0f04.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4fcce5a.js",
+    "static/js/2.4fb69190.chunk.js",
+    "static/css/main.3c14189b.chunk.css",
+    "static/js/main.ecec1d2b.chunk.js"
+  ]
+}
