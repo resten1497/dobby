@@ -67,7 +67,7 @@ function App() {
            <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>전역까지</span>
            <span style={{zIndex:100,color:"white",fontSize:"9.5rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"120%"}}>{date(times)}</span>
         </div>
-        <img src={stop} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
+        <img src={cat} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
         <div style={{width:"100vw",height:"100vh",backgroundColor:"black",position:"absolute",opacity:"50%",}}/>
         
        
