@@ -43,33 +43,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div>
-        <span>{Math.floor(times.nonsanTime / (1000 * 60 * 60 * 24))}일 </span>
-        <span>{Math.floor((times.nonsanTime  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))} 시간</span>
-        <span>{Math.floor((times.nonsanTime  % (1000 * 60 * 60)) / (1000 * 60))} 분 </span> 
-        <span>{Math.floor((times.nonsanTime  % (1000 * 60)) / 1000)} 초</span>  
-      </div>
-      
-      <div>
-        <span>{Math.floor(times.time / (1000 * 60 * 60 * 24))}일 </span>
-        <span>{Math.floor((times.time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))} 시간</span>
-        <span>{Math.floor((times.time % (1000 * 60 * 60)) / (1000 * 60))} 분 </span> 
-        <span>{Math.floor((times.time % (1000 * 60)) / 1000)} 초</span>  
-      </div>
-      <div>
-        <span>{Math.floor(times.allTime / (1000 * 60 * 60 * 24))}일 </span>
-        <span>{Math.floor((times.allTime  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))} 시간</span>
-        <span>{Math.floor((times.allTime  % (1000 * 60 * 60)) / (1000 * 60))} 분 </span> 
-        <span>{Math.floor((times.allTime  % (1000 * 60)) / 1000)} 초</span>  
-      </div> */}
       <div style={{position: "relative"}}>
         <div style={{position:"absolute",width:"100vw",paddingTop:"40vh"}}>
-           <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>전역까지</span>
-           <span style={{zIndex:100,color:"white",fontSize:"9.5rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"120%"}}>{date(times)}</span>
+           {/* <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>전역까지</span>
+           <span style={{zIndex:100,color:"white",fontSize:"9.5rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"120%"}}>{date(times)}</span> */}
+
+           
         </div>
-        <img src={cat} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
+        {/* <img src={cat} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
         <div style={{width:"100vw",height:"100vh",backgroundColor:"black",position:"absolute",opacity:"50%",}}/>
-        
+         */}
        
       </div>
    
@@ -79,8 +62,22 @@ function App() {
     </div>
   );
 }
+const InputDate = (date) => {
+  return(      
+    <>   
+      <input placeholder="_" color={"white"}style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0,color:'white'}} maxLength={1}></input>
+      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+    </>
+  )
 
-let date = (times) => {
+}
+
+
+
+
+const date = (times) => {
   let answer = Math.floor(times.allTime / (1000 * 60 * 60 * 24)) +"일 "
   answer += Math.floor((times.allTime  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "시간 "
   answer += Math.floor((times.allTime  % (1000 * 60 * 60)) / (1000 * 60))+ "분 "
