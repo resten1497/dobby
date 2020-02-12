@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import cat from './slave_nonsan.jpg'
 import stop from './stop_it.jpg'
+import gg from './gg.jpg'
 
 function App() {
   const countDownDate = new Date("March 19, 2020 11:00:00").getTime();
@@ -50,7 +51,7 @@ function App() {
 
            
         </div>
-        <img src={cat} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
+        <img src={gg} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
         <div style={{width:"100vw",height:"100vh",backgroundColor:"black",position:"absolute",opacity:"50%",}}/>
         
        
