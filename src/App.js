@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import cat from './slave_nonsan.jpg'
 import stop from './stop_it.jpg'
+import nonsan from './nonsan.jpg'
 import gg from './gg.jpg'
 
 function App() {
@@ -46,12 +47,12 @@ function App() {
     <div className="App">
       <div style={{position: "relative"}}>
         <div style={{position:"absolute",width:"100vw",paddingTop:"40vh"}}>
-           <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>전역까지</span>
+           <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>복귀까지</span>
            <span style={{zIndex:100,color:"white",fontSize:"9.5rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"120%"}}>{date(times)}</span>
 
            
         </div>
-        <img src={gg} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
+        <img src={nonsan} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
         <div style={{width:"100vw",height:"100vh",backgroundColor:"black",position:"absolute",opacity:"50%",}}/>
         
        
@@ -79,10 +80,10 @@ const InputDate = (date) => {
 
 
 const date = (times) => {
-  let answer = Math.floor(times.allTime / (1000 * 60 * 60 * 24)) +"일 "
-  answer += Math.floor((times.allTime  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "시간 "
-  answer += Math.floor((times.allTime  % (1000 * 60 * 60)) / (1000 * 60))+ "분 "
-  answer += Math.floor((times.allTime   % (1000 * 60)) / 1000) + "초"
+  let answer = Math.floor(times.time / (1000 * 60 * 60 * 24)) +"일 "
+  answer += Math.floor((times.time  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "시간 "
+  answer += Math.floor((times.time  % (1000 * 60 * 60)) / (1000 * 60))+ "분 "
+  answer += Math.floor((times.time % (1000 * 60)) / 1000) + "초"
   
 
   return answer
