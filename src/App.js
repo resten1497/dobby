@@ -1,92 +1,101 @@
-import React,{useState,useEffect} from 'react';
-import cat from './slave_nonsan.jpg'
-import stop from './stop_it.jpg'
-import nonsan from './nonsan.jpg'
-import gg from './gg.jpg'
+import React, {useState, useEffect} from 'react';
 
 function App() {
-  const countDownDate = new Date("March 19, 2020 11:00:00").getTime();
-  const countDownNonsanDate = new Date("February 18, 2020 14:00:00").getTime();
-  const countDownAllDate = new Date(" December 18, 2021 00:00:00").getTime();
- 
+    const countDownDate = new Date("March 19, 2020 11:00:00").getTime();
+    const countDownNonsanDate = new Date("February 18, 2020 14:00:00").getTime();
+    const countDownAllDate = new Date(" December 18, 2021 00:00:00").getTime();
 
-  const now = new Date();
-  // const [Time,setTime] = useState(countDownDate-now.getTime())
-  // const [allTime,setAllTime] = useState(countDownAllDate - now.getTime())
-  // const [NonsanTime,setNonsanTime] = useState(countDownNonsanDate - now.getTime())
-  const [times, setTimes] = useState({
-    time: countDownDate-now.getTime(),
-    allTime: countDownAllDate - now.getTime(),
-    nonsanTime: countDownNonsanDate - now.getTime(),
-  });
-  
-  useEffect(() => {
-    let test = setInterval(()=>{
-      let now = Date.now()
-      let distance = countDownDate - now;
-      let alldistance = countDownAllDate - now;
-      let Nonsandistance = countDownNonsanDate - now;
-      setTimes({
-        time: distance,
-        allTime: alldistance,
-        nonsanTime: Nonsandistance,
-      })
+    const now = new Date();
+    // const [Time,setTime] = useState(countDownDate-now.getTime())
+    // const [allTime,setAllTime] = useState(countDownAllDate - now.getTime())
+    // const [NonsanTime,setNonsanTime] = useState(countDownNonsanDate - now.getTime())
+    const [times, setTimes] = useState({
+        time: countDownDate - now.getTime(),
+        allTime: countDownAllDate - now.getTime(),
+        nonsanTime: countDownNonsanDate - now.getTime(),
+    });
 
-    },1000);
+    useEffect(() => {
+        let test = setInterval(() => {
+            let now = Date.now();
+            let distance = countDownDate - now;
+            let alldistance = countDownAllDate - now;
+            let Nonsandistance = countDownNonsanDate - now;
+            setTimes({
+                time: distance,
+                allTime: alldistance,
+                nonsanTime: Nonsandistance,
+            })
 
-   return () => {
-      clearInterval(test)
-   }
-  }, [])
- 
-  console.log(times)
+        }, 1000);
 
-  return (
-    <div className="App">
-      <div style={{position: "relative"}}>
-        <div style={{position:"absolute",width:"100vw",paddingTop:"40vh"}}>
-           <span style={{zIndex:100,color:"white",fontSize:"2.3rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"0%"}}>복귀까지</span>
-           <span style={{zIndex:100,color:"white",fontSize:"9.5rem",position:"absolute",textAlign:"center",width:"100%",lineHeight:"120%"}}>{date(times)}</span>
+        return () => {
+            clearInterval(test)
+        }
+    }, []);
 
-           
+    // console.log(times);
+
+    return (
+        <div className="App">
+            <div style={{position: "relative"}}>
+                <div style={{position: "absolute", width: "100vw", paddingTop: "40vh"}}>
+                    <span style={{
+                        zIndex: 100,
+                        color: "white",
+                        fontSize: "2.3rem",
+                        position: "absolute",
+                        textAlign: "center",
+                        width: "100%",
+                        lineHeight: "0%"
+                    }}>복귀까지</span>
+                    <span style={{
+                        zIndex: 100,
+                        color: "white",
+                        fontSize: "9.5rem",
+                        position: "absolute",
+                        textAlign: "center",
+                        width: "100%",
+                        lineHeight: "120%"
+                    }}>{date(times)}</span>
+
+
+                </div>
+                <img src="/images/nonsan.jpg" alt="이곳은 호국의 요람. 논산입니다."
+                     style={{width: "100vw", height: "100vh", position: "absolute", left: 0,}}/>
+                <div style={{
+                    width: "100vw",
+                    height: "100vh",
+                    backgroundColor: "black",
+                    position: "absolute",
+                    opacity: "50%",
+                }}/>
+
+
+            </div>
         </div>
-        <img src={nonsan} alt={"123"} style={{width: "100vw",height:"100vh",position:"absolute",left:0,}}/>
-        <div style={{width:"100vw",height:"100vh",backgroundColor:"black",position:"absolute",opacity:"50%",}}/>
-        
-       
-      </div>
-   
-    
-
-
-    </div>
-  );
-}
-const InputDate = (date) => {
-  return(      
-    <>   
-      <input placeholder="_" color={"white"}style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0,color:'white'}} maxLength={1}></input>
-      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-      <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-    </>
-  )
-
+    );
 }
 
-
+// const InputDate = (date) => {
+//   return(
+//     <>
+//       <input placeholder="_" color={"white"}style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0,color:'white'}} maxLength={1}></input>
+//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
+//     </>
+//   )
+//
+// }
 
 
 const date = (times) => {
-  let answer = Math.floor(times.time / (1000 * 60 * 60 * 24)) +"일 "
-  answer += Math.floor((times.time  % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "시간 "
-  answer += Math.floor((times.time  % (1000 * 60 * 60)) / (1000 * 60))+ "분 "
-  answer += Math.floor((times.time % (1000 * 60)) / 1000) + "초"
-  
-
-  return answer
-
-}
+    return `${Math.floor(times.time / (1000 * 60 * 60 * 24))}일 
+            ${Math.floor((times.time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}시간 
+            ${Math.floor((times.time % (1000 * 60 * 60)) / (1000 * 60))}분 
+            ${Math.floor((times.time % (1000 * 60)) / 1000)}초`;
+};
 
 
 export default App;
