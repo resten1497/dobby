@@ -6,9 +6,7 @@ function App() {
     const countDownAllDate = new Date(" December 18, 2021 00:00:00").getTime();
 
     const now = new Date();
-    // const [Time,setTime] = useState(countDownDate-now.getTime())
-    // const [allTime,setAllTime] = useState(countDownAllDate - now.getTime())
-    // const [NonsanTime,setNonsanTime] = useState(countDownNonsanDate - now.getTime())
+
     const [times, setTimes] = useState({
         time: countDownDate - now.getTime(),
         allTime: countDownAllDate - now.getTime(),
@@ -33,8 +31,6 @@ function App() {
             clearInterval(test)
         }
     }, []);
-
-    // console.log(times);
 
     return (
         <div className="App">
@@ -76,18 +72,6 @@ function App() {
         </div>
     );
 }
-
-// const InputDate = (date) => {
-//   return(
-//     <>
-//       <input placeholder="_" color={"white"}style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0,color:'white'}} maxLength={1}></input>
-//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-//       <input placeholder="_" style={{fontSize:"2.3rem",textAlign:"center",width:30,margin:10,border:0}} maxLength={1}></input>
-//     </>
-//   )
-//
-// }
 
 
 const date = (times) => {
