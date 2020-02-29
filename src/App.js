@@ -1,6 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import cat from './slave_nonsan.jpg'
 import stop from './stop_it.jpg'
 import nonsan from './nonsan.jpg'
