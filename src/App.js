@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import style from "./css/App.module.css";
 
 function App() {
     const countDownDate = new Date("March 19, 2020 11:00:00").getTime();
@@ -33,41 +34,12 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            <div style={{position: "relative"}}>
-                <div style={{position: "absolute", width: "100vw", paddingTop: "40vh"}}>
-                    <span style={{
-                        zIndex: 100,
-                        color: "white",
-                        fontSize: "2.3rem",
-                        position: "absolute",
-                        textAlign: "center",
-                        width: "100%",
-                        lineHeight: "0%"
-                    }}>복귀까지</span>
-                    <span style={{
-                        zIndex: 100,
-                        color: "white",
-                        fontSize: "9.5rem",
-                        position: "absolute",
-                        textAlign: "center",
-                        width: "100%",
-                        lineHeight: "120%"
-                    }}>{date(times)}</span>
+        <div className={style.App}>
+            <img src="/images/nonsan.jpg" alt="이곳은 호국 요람의 도시, 논산입니다." className={style.background} />
 
-
-                </div>
-                <img src="/images/nonsan.jpg" alt="이곳은 호국의 요람. 논산입니다."
-                     style={{width: "100vw", height: "100vh", position: "absolute", left: 0,}}/>
-                <div style={{
-                    width: "100vw",
-                    height: "100vh",
-                    backgroundColor: "black",
-                    position: "absolute",
-                    opacity: "50%",
-                }}/>
-
-
+            <div className={style.text}>
+                <h3 className={style.title}>복귀까지</h3>
+                <p className={style.counter}>{date(times)}</p>
             </div>
         </div>
     );
