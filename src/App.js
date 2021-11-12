@@ -38,7 +38,7 @@ function App() {
 
     return (
         <div className={style.App}>
-            <img src="images/nonsan.jpg" alt="이곳은 호국 요람의 도시, 논산입니다." className={style.background} />
+            <img src="images/slave_nonsan.jpg" alt="이곳은 호국 요람의 도시, 논산입니다." className={style.background} />
 
             <div className={style.text}>
                 <h3 className={style.title}>복귀까지</h3>
@@ -50,10 +50,10 @@ function App() {
 
 
 const date = (times) => {
-    return `${Math.floor(times.time / (1000 * 60 * 60 * 24))}일
-            ${Math.floor((times.time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}시간
-            ${Math.floor((times.time % (1000 * 60 * 60)) / (1000 * 60))}분
-            ${Math.floor((times.time % (1000 * 60)) / 1000)}초`;
+    return `${Math.floor(times.allTime / (1000 * 60 * 60 * 24))}일
+            ${Math.floor((times.allTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))}시간
+            ${Math.floor((times.allTime % (1000 * 60 * 60)) / (1000 * 60))}분
+            ${Math.floor((times.allTime % (1000 * 60)) / 1000)}초`;
 };
 
 
