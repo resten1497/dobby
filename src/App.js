@@ -41,7 +41,7 @@ function App() {
             <img src="images/slave_nonsan.jpg" alt="이곳은 호국 요람의 도시, 논산입니다." className={style.background} />
 
             <div className={style.text}>
-                <h3 className={style.title}>복귀까지</h3>
+                <h3 className={style.title}>전역까지</h3>
                 
                 <p className={style.counter}>{date(times)}</p>
             </div>
