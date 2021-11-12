@@ -38,7 +38,7 @@ function App() {
 
     return (
         <div className={style.App}>
-            <img src="images/slave_nonsan.jpg" alt="이곳은 호국 요람의 도시, 논산입니다." className={style.background} />
+            <img src="images/slave_nonsan.jpg" alt="똑바로서라핫산" className={style.background} />
 
             <div className={style.text}>
                 <h3 className={style.title}>전역까지</h3>
